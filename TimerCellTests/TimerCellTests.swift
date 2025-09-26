@@ -22,7 +22,7 @@ final class TimerCellTests: XCTestCase {
         timerViewModel = nil
     }
 
-    func getNumberOfCells() {
+    func testNumberOfCells() {
         XCTAssertEqual(timerViewModel.getTimerCount(), 40)
     }
     
@@ -40,5 +40,13 @@ final class TimerCellTests: XCTestCase {
         let timer = timerViewModel.getTimer(at: 5)
         XCTAssertEqual(timer.count, 0)
         XCTAssertTrue(timer.isPaused)
+    }
+    
+    func testComparable() {
+        let timer1 = TimerModel(count: 2, isPaused: true)
+        let timer2 = TimerModel(count: 5, isPaused: false)
+            
+        XCTAssertLessThan(timer1, timer2)
+        XCTAssertGreaterThan(timer2, timer1)
     }
 }
