@@ -30,6 +30,7 @@ class TimerViewController: UIViewController, UITableViewDataSource, UITableViewD
     func setupUI() {
         view.backgroundColor = .systemGreen
         title = "Timer"
+        test()
         
         timerTitle = UILabel()
         timerTitle.translatesAutoresizingMaskIntoConstraints = false
@@ -60,6 +61,9 @@ class TimerViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     //test
+    func test(){
+        print("testing")
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.getTimerCount()
