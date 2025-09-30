@@ -60,8 +60,9 @@ class TimerViewController: UIViewController, UITableViewDataSource, UITableViewD
         ])
     }
     
-    //test
+
     func test1(){
+
         print("testing")
     }
     
